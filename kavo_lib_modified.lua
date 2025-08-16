@@ -1417,7 +1417,7 @@ function Kavo.CreateLib(kavName, themeList)
                                 pcall(function()
                                     callback(Value)
                                 end)
-                                sliderDrag:TweenSize(UDim2.new(0, math.clamp(mouse.X - sliderDrag.AbsolutePosition.X, 0, 149), 0, 6), "InOut", "Linear", 0.05, true)
+                                sliderDrag:TweenSize(UDim2.new(0, math.clamp(input1.Position.X - sliderDrag.AbsolutePosition.X, 0, 149), 0, 6), "InOut", "Linear", 0.05, true)
                             end
                         end)
                         releaseconnection = uis.InputEnded:Connect(function(input2)
@@ -1430,7 +1430,7 @@ function Kavo.CreateLib(kavName, themeList)
                                 game.TweenService:Create(val, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
                                     TextTransparency = 1
                                 }):Play()
-                                sliderDrag:TweenSize(UDim2.new(0, math.clamp(mouse.X - sliderDrag.AbsolutePosition.X, 0, 149), 0, 6), "InOut", "Linear", 0.05, true)
+                                sliderDrag:TweenSize(UDim2.new(0, math.clamp(input2.Position.X - sliderDrag.AbsolutePosition.X, 0, 149), 0, 6), "InOut", "Linear", 0.05, true)
                                 moveconnection:Disconnect()
                                 releaseconnection:Disconnect()
                             end
